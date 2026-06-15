@@ -51,13 +51,8 @@
   .hero p.lead{font-size:1.12rem;color:var(--espresso-2);max-width:30rem;margin-bottom:30px}
   .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
   .hero-art{position:relative;height:430px;border-radius:24px;overflow:hidden;box-shadow:var(--shadow);
-      background:linear-gradient(150deg,#efd9c6,#c0915f 120%)}
-  .hero-art::before{content:"";position:absolute;inset:0;background:
-      radial-gradient(circle at 30% 30%,rgba(255,255,255,.45),transparent 50%),
-      repeating-linear-gradient(45deg,rgba(255,255,255,.05) 0 18px,transparent 18px 36px)}
-  .hero-art .mono{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;text-align:center;padding:24px}
-  .hero-art .mono .b{font-family:'Playfair Display',serif;font-size:4.4rem;font-weight:700;line-height:.95;text-shadow:0 8px 30px rgba(58,44,37,.35)}
-  .hero-art .mono small{letter-spacing:5px;font-size:.7rem;text-transform:uppercase;margin-top:12px;opacity:.92}
+      background:url('img/u0.jpg') center 22%/cover no-repeat, linear-gradient(150deg,#efd9c6,#c0915f)}
+  .hero-art::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(58,44,37,.04),rgba(58,44,37,.2))}
 
   /* STRIP */
   .strip{background:var(--espresso);color:#f3e7db}
@@ -83,24 +78,20 @@
   /* O NAS */
   .about{background:linear-gradient(180deg,var(--cream),#f5ebe1)}
   .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:center}
-  .about-art{height:360px;border-radius:22px;box-shadow:var(--shadow);background:
-      linear-gradient(140deg,#3a2c25,#5a463c);position:relative;overflow:hidden;display:grid;place-items:center;color:#f3e7db;text-align:center}
-  .about-art .q{font-family:'Playfair Display',serif;font-style:italic;font-size:1.5rem;padding:34px;line-height:1.4}
+  .about-art{height:360px;border-radius:22px;box-shadow:var(--shadow);position:relative;overflow:hidden;display:grid;place-items:center;color:#fff;text-align:center;
+      background:url('img/u13.jpg') center/cover no-repeat,linear-gradient(140deg,#3a2c25,#5a463c)}
+  .about-art::before{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(58,44,37,.42),rgba(58,44,37,.68))}
+  .about-art .q{position:relative;z-index:2;font-family:'Playfair Display',serif;font-style:italic;font-size:1.5rem;padding:34px;line-height:1.4;text-shadow:0 3px 16px rgba(0,0,0,.45)}
   .about-art .q span{color:var(--gold)}
   .about-txt h2{font-size:clamp(1.9rem,3.6vw,2.6rem);margin-bottom:18px}
   .about-txt p{color:var(--espresso-2);margin-bottom:16px}
 
   /* GALERIA */
   .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-  .tile{aspect-ratio:1/1;border-radius:16px;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:18px;color:#fff;font-weight:500;box-shadow:0 12px 30px -16px rgba(58,44,37,.5)}
-  .tile span{position:relative;z-index:2;font-size:.98rem;letter-spacing:.3px}
-  .tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(58,44,37,.55))}
-  .t1{background:linear-gradient(140deg,#e7c9b8,#c0915f)}
-  .t2{background:linear-gradient(140deg,#d9b8a3,#a9763f)}
-  .t3{background:linear-gradient(140deg,#cda98c,#5a463c)}
-  .t4{background:linear-gradient(140deg,#e9d3c2,#b9895c)}
-  .t5{background:linear-gradient(140deg,#cbab93,#8a6a4f)}
-  .t6{background:linear-gradient(140deg,#decbbb,#c0915f)}
+  .tile{aspect-ratio:1/1;border-radius:16px;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:18px;color:#fff;font-weight:600;box-shadow:0 12px 30px -16px rgba(58,44,37,.5);background-color:#c9a88f;background-size:cover;background-position:center;transition:.3s}
+  .tile:hover{transform:translateY(-4px)}
+  .tile span{position:relative;z-index:2;font-size:1rem;letter-spacing:.3px;text-shadow:0 2px 10px rgba(0,0,0,.45)}
+  .tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(58,44,37,.05) 45%,rgba(58,44,37,.72))}
 
   /* OPINIE */
   .reviews{background:var(--espresso);color:#f3e7db;text-align:center}
@@ -167,9 +158,7 @@
         <a class="btn btn-dark" href="tel:+48609095847">Zadzwoń: +48 609 095 847</a>
       </div>
     </div>
-    <div class="hero-art" aria-hidden="true">
-      <div class="mono"><div class="b">BC</div><small>Brow Craft · Martyna Janekowicz</small></div>
-    </div>
+    <div class="hero-art" role="img" aria-label="Brow Craft — stylizacja brwi i makijaż"></div>
   </div>
 </section>
 
@@ -225,12 +214,12 @@
       <p>Naturalne, zadbane brwi i spojrzenie pełne wyrazu.</p>
     </div>
     <div class="gallery">
-      <div class="tile t1 reveal"><span>Stylizacja brwi</span></div>
-      <div class="tile t2 reveal"><span>Laminacja</span></div>
-      <div class="tile t3 reveal"><span>Lifting rzęs</span></div>
-      <div class="tile t4 reveal"><span>Henna pudrowa</span></div>
-      <div class="tile t5 reveal"><span>Makijaż permanentny</span></div>
-      <div class="tile t6 reveal"><span>Efekt naturalny</span></div>
+      <div class="tile reveal" style="background-image:url('img/u8.jpg')"><span>Stylizacja brwi</span></div>
+      <div class="tile reveal" style="background-image:url('img/u3.jpg')"><span>Laminacja</span></div>
+      <div class="tile reveal" style="background-image:url('img/u4.jpg')"><span>Lifting rzęs</span></div>
+      <div class="tile reveal" style="background-image:url('img/u5.jpg')"><span>Henna pudrowa</span></div>
+      <div class="tile reveal" style="background-image:url('img/u6.jpg')"><span>Makijaż permanentny</span></div>
+      <div class="tile reveal" style="background-image:url('img/u7.jpg')"><span>Efekt naturalny</span></div>
     </div>
   </div>
 </section>
